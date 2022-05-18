@@ -1,0 +1,312 @@
+/*PAGINA DE CONTACTO*/
+
+#contacto {
+    display: grid;
+    grid-template-rows: 15% auto 15%;
+    grid-template-areas:
+        "navegacion"
+        "cuerpo"
+        "footer";
+    width: 100vw;
+    overflow-x: hidden;
+
+    .contactanos {
+        grid-area: navegacion;
+        background-color: $blancoTransparente;
+        width: 100vw;
+
+        .titulo-contacto {
+            height: calc(100% - 9rem);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 7rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: $blanco;
+            }
+        }
+    }
+
+    .cuerpo-contacto {
+        grid-area: cuerpo;
+        min-width: 100%;
+
+        .redes {
+            height: 30rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15rem;
+
+            article div {
+                width: 22rem;
+                height: 22rem;
+                background-color: $blancoTransparente;
+                border-radius: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        }
+
+        .recuadro-ubicacion {
+            margin-top: 12rem;
+            background-color: $grisTransparente-claro;
+            height: 40rem;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20rem;
+
+            h2 {
+                font-size: 7rem;
+                color: $azulMarino;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $blanco;
+                padding: 1rem;
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .ubicacion {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mapa {
+                width: 50%;
+            }
+        }
+
+        .formulario {
+            background-color: $blancoTransparente;
+            margin: auto;
+            width: 30%;
+            border-radius: 2rem;
+            padding: 5rem;
+            margin-bottom: 10rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            label {
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+
+            .boton {
+                border-radius: 1rem;
+                width: 30%;
+                height: 4rem;
+                font-size: 2rem;
+                color: $blanco;
+                background-color: $grisTransparente;
+            }
+        }
+    }
+
+    .footer-contacto {
+        grid-area: footer;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    #contacto {
+        .cuerpo-contacto {
+            .redes {
+                gap: 7rem;
+            }
+
+            .formulario {
+                width: 40%;
+                border-radius: 2rem;
+                padding: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #contacto {
+        grid-template-rows: 15% auto 15%;
+        grid-template-areas:
+            "navegacion"
+            "cuerpo"
+            "footer";
+        min-height: 100vh;
+        width: 100%;
+
+        .contactanos {
+            grid-area: navegacion;
+            width: 100vw;
+
+            .titulo-contacto {
+                height: 16rem;
+
+                h1{
+                    font-size: 6rem;
+                }
+            }
+    
+        }
+
+        .cuerpo-contacto {
+            grid-area: cuerpo;
+
+            .redes {
+                width: 100vw;
+                gap: 0rem;
+
+                article div {
+                    width: 20rem;
+                    height: 20rem;
+                    margin: 2rem;
+                }
+            }
+
+            .recuadro-ubicacion {
+                margin-top: 0rem;
+                height: 65rem;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 10rem;
+
+                h2 {
+                    font-size: 5rem;
+                }
+
+                .mapa {
+                    width: 80%;
+                    height: 35rem;
+                }
+            }
+
+            .formulario {
+                width: 50%;
+                border-radius: 1.2rem;
+                padding: 3rem;
+    
+                label {
+                    font-size: 1.2rem;
+                }
+    
+                input,
+                textarea {
+                    width: 100%;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    font-size: 1.2rem;
+                } 
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 630px) {
+
+    #contacto {
+        grid-template-rows: 100vh auto 15%;
+        grid-template-areas:
+            "navegacion"
+            "cuerpo"
+            "footer";
+        min-height: 100vh;
+        width: 100%;
+
+        .contactanos {
+            grid-area: navegacion;
+
+            .titulo-contacto {
+                height: 20rem;
+
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        .cuerpo-contacto {
+            grid-area: cuerpo;
+
+            .redes {
+                height: 75rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                article div {
+                    width: 20rem;
+                    height: 20rem;
+                    margin: 2rem;
+                }
+            }
+
+            .recuadro-ubicacion {
+                margin-top: 5rem;
+
+                h2 {
+                    font-size: 5.5rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .formulario {
+    
+                .boton {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 458px) {
+    #contacto {
+
+        .contactanos {
+
+            .titulo-contacto {
+
+                h1 {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+/* Constantes de colores*/
+$gris: #505160;
+$grisOscuro: rgb(37, 36, 36);
+$grisTransparente: rgba(37, 36, 36, 0.9);
+$grisTransparente-claro: rgba(37, 36, 36, 0.4);
+$blancoTransparente: rgba(255, 255, 255, 0.3);
+$azulMarino: #68829E;
+$verdeClaro: #AEBD38;
+$verdeOscuro: #598234;
+$blanco: #ffffff;
+$negro: #000000;
+
+$imagen-fondo: (
+    posicion: center center,
+    repeticion: no-repeat,
+    tamaño: cover,
+);

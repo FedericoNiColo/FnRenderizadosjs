@@ -1,0 +1,57 @@
+/*PIE DE PAGINA PARA PAGINAS: INICIO, INTERIORES, EXTERIROES, CONTACTO.*/
+
+.pie-pagina {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $grisOscuro;
+    height: 10rem;
+
+    .iconos-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-footer {
+        width: 7rem
+    }
+
+    .parrafo-footer {
+        font-size: 1.5rem;
+        font-weight: 300;
+        padding: 1rem;
+        color: $blanco;
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+
+    .pie-pagina {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        height: 35rem;
+        padding: 1.5rem;
+
+        .iconos-footer {
+            flex-direction: column;
+        }
+
+        .parrafo-footer {
+            font-size: 1.2rem;
+        }
+
+        .logo-footer {
+            width: 5rem;
+        }
+
+        .logo-enlace {
+            order: -1;
+        }
+    }
+
+}

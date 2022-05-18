@@ -1,0 +1,201 @@
+/*PAGINA INTERIORES Y EXTERIORES*/
+
+#interiores {
+    display: grid;
+    grid-template-rows: 110% 10%;
+    grid-template-areas:
+        "cuerpo"
+        "footer";
+    width: 100vw;
+    gap: 10rem;
+    overflow-x: hidden;
+
+    .cuerpo-galeria {
+        grid-area: cuerpo;
+        display: grid;
+        grid-template-rows: 5% 2.3% auto;
+        grid-template-areas:
+            "encabezado"
+            "titulo"
+            "imagenes";
+        
+        .encabezado-galeria {
+            grid-area: encabezado;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../imagenes/inte.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+        }
+
+        .titulo-galeria {
+            grid-area: titulo;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 20rem;
+
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 7rem;
+                font-weight: 500;
+                color: $blanco;
+                padding: 2rem;
+            }
+
+            .icono {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.2;
+                visibility: visible;
+
+                p {
+                    font-size: 3rem;
+                    color: #8d8d8d;
+                }
+            }
+        }
+
+        .galeria-imagenes {
+            grid-area: imagenes;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4rem;
+
+            div {
+                width: 50%;
+                height: 9%;
+                border-radius: 4rem;
+                transition: 5s;
+                margin: 2rem;
+            }
+
+            .imagen {
+                width: 100%;
+                height: 100%;
+                border-radius: 4rem;
+            }
+        }
+    }
+
+    .footer-grid {
+        grid-area: footer;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    #interiores {
+        .cuerpo-galeria {
+            .galeria-imagenes {
+                div {
+                    &:hover {
+                        width: 70%;
+                        height: 12%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #interiores {
+
+        .cuerpo-galeria {
+            grid-template-rows: 5% 2.5% auto;
+
+            .titulo-galeria {
+                    height: 15rem;
+                    h1 {
+                        font-size: 5.5rem;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+@media screen and (max-width: 768px) {
+
+    #interiores {
+        .cuerpo-galeria {
+            grid-template-rows: 5% 1.5% auto;
+            
+            .titulo-galeria {
+                display: block;
+                margin-top: 1rem;
+
+                h1 {
+                    font-size: 5rem;
+                }
+
+                .icono {
+                    visibility: hidden;
+                }
+            }
+
+            .galeria-imagenes div {
+                width: 90%;
+                height: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #interiores {
+        grid-template-rows: 100% 20%;
+        gap: 5rem;
+
+        .cuerpo-galeria {
+            grid-area: cuerpo;
+            display: grid;
+            grid-template-rows: 65vh auto;
+            grid-template-areas:
+                "encabezado"
+                "imagenes";
+            gap: 3rem;
+
+            .encabezado-galeria {
+                grid-area: encabezado;
+            }
+
+            .titulo-galeria {
+                display: block;
+                position: absolute;
+                top: 48%;
+
+                h1 {
+                    font-size: 4.5rem;
+                    color: $azulMarino;
+                    font-weight: 700;
+                }
+            }
+
+            .galeria-imagenes {
+                grid-area: imagenes;
+                justify-content: start;
+                gap: 2rem;
+
+                div {
+                    height: 12%;
+                    border-radius: 2rem;
+
+                    .imagen {
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
