@@ -138,4 +138,3 @@ function preguntar(pregunta) {
     return respuesta;
 }
 
-

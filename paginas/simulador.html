@@ -18,6 +18,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../imagenes/fa (1).ico" type="image/x-icon">
+    <script src="/script/cliente.js" defer></script>
+    <script src="/script/renders.js" defer></script>
+    <script src="/script/eventos.js" defer></script>
+    <script src="/script/app.js" defer></script>
+    <!-- <script src="/script/script.js" defer></script>  -->
 </head>
 
 <body id="simulador">
@@ -25,142 +30,120 @@
     <section class="inicioJuego sombraOscura">
 
         <div class="logoSimulador">
-            <img class="imagenLogo" src="/imagenes/LOGOBLANCO.png" alt="logo">
+            <a href="/paginas/simulador.html"><img class="imagenLogo" src="/imagenes/LOGOBLANCO.png" alt="logo"></a>
         </div>
 
         <h1 class="tituloSimulador">simulador</h1>
 
-        <form class="form">
+        <section class="tarjetaAgregada">
+            <h4>Interior</h4>
+            <div class="contenedorTarjetaAgregada">
+                <p>Estático</p>
+                <p>Valor: $12000</p>
+                <button class="eliminarTarjeta"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg></button>
+            </div>
+        </section>
+    </section>
+
+    <section class="contenedorFormulario ">
+        <form id="formulario" class="form sombraClara ">
 
             <div class="elementos">
-                <input class="sombraClara" type="text" placeholder="Ingrese su Nombre">
+                <input type="text" placeholder="Ingrese su Nombre">
             </div>
 
             <div class="elementos ">
-                <input class="sombraClara" type="text" placeholder="Ingrese su Apellido">
+                <input type="text" placeholder="Ingrese su Apellido">
 
             </div>
 
             <div class="elementos">
-                <input class="sombraClara" type="email" placeholder="Ingrese su Email">
+                <input type="email" placeholder="Ingrese su Email" required>
 
             </div>
 
-            <button class="boton sombraClara">Siguiente</button>
-
-
+            <button id="siguiente" class="boton" type="submit">Siguiente</button>
         </form>
-
     </section>
 
-    <section class="memorama">
+    <!-- <div class="contenedorTarjetas">
+        
+        <section class="tarjetasInterior sombraClara">
+            <div class="fondoInterior">
+                <h3>Render interior</h3>
+            </div>
+
+            <article>
+                <h4>Estático</h4>
+               
+                <p>$7000</p>
+                <button class="botonAgregar">Agregar</button>
+            </article>
+
+            <article>
+                <h4>Panorámico</h4>
+                
+                <p>12000</p>
+                <button class="botonAgregar">Agregar</button>
+            </article>
+        </section>
+
+        <section class="tarjetasInterior  sombraClara">
+            <div class="fondoInterior fondoExterior">
+                <h3>Render Exterior</h3>
+            </div>
+
+            <article>
+                <h4>Estático</h4>
+                
+                <p>$7000</p>
+                <button class="botonAgregar">Agregar</button>
+            </article>
+
+            <article>
+                <h4>Panorámico</h4>
+                
+                <p>12000</p>
+                <button class="botonAgregar">Agregar</button>
+            </article>
+
+        </section>
+    </div> -->
+
+
+    <!--  <section class="memorama">
 
         <div class="rectanguloMemorama sombraOscura">
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="100"
-                    height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <circle cx="12" cy="12" r="4" />
-                    <path
-                        d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                </svg></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           
+            
         </div>
 
         <div class="calculosJuego">
 
         </div>
 
-    </section>
+    </section>    -->
 
-    <script src="/script/script.js"></script>
+    <!-- <script src="/script/eventos.js"></script>
+     <script src="/script/script.js"></script> -->
 </body>
 
 </html>
